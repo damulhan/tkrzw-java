@@ -4,7 +4,11 @@ PACKAGE = tkrzw-java
 VERSION = 0.1.32
 
 !IFNDEF TKRZW_DIR
-TKRZW_DIR = ..\tkrzw-1.0.34\tkrzw-1.0.34
+!IF EXIST(..\tkrzw\tkrzw.lib)
+TKRZW_DIR = ..\tkrzw
+!ELSE
+TKRZW_DIR = ..\tkrzw-1.0.34
+!ENDIF
 !ENDIF
 
 TKRZW_INC = $(TKRZW_DIR)
